@@ -43,10 +43,10 @@ jobs:
             echo "::error::sdkmanager not found under $SDK_ROOT"
             exit 1
           fi
-          chmod +x "$SDKMANAGER"
           echo "Using sdkmanager: $SDKMANAGER"
-          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
-          "$SDKMANAGER" "platforms;android-34" "build-tools;34.0.0"
+          # 预装文件不属于 runner 用户，不能 chmod；它本身已可执行，用 bash 调用即可
+          yes | bash "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          bash "$SDKMANAGER" "platforms;android-34" "build-tools;34.0.0"
 
       - name: Install npm dependencies
         run: npm ci
