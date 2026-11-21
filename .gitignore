@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local IDE / editor
+.idea/
+.vscode/
+
+# Android local files (also covered by android/.gitignore)
+android/local.properties
+android/.gradle/
+android/app/build/
+android/build/
+
+# Keep the Capacitor Android source (resources, java, gradle wrapper) tracked.

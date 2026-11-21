@@ -1,0 +1,9 @@
+{
+  "appId": "com.workbuddy.top10albums",
+  "appName": "Top 10 Albums",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "plugins": {
+    "NativeAudio": { "forceEnable": true }
+  }
+}
